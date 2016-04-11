@@ -1,6 +1,11 @@
 # MyQueue - "Don't wait again"
 ##### Remember when you go to government hospitals or anywhere else with a really long queue? You pick your ticket and it says your number is in the next 100. You want to go somewhere do something while waiting, but you don't want to risk having your turn called while you aren't there. Here comes MyQueue. Check in your ticket into the App and get notified whenever your turn is closing. The App also shows the real time counter number, just in case you still worry.
 
+#### Screenshot 
+![alt tag](https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-41-47-957.png)
+![alt tag](https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-41-52-861.png?raw=true)
+
+
 #### Current version
 * Exiting user is able to log in, and check in with his counterID and number (user's number is from the ticket issued).     
 * App will authenticate the counterID where upon success, App will store the user's number into database.   
