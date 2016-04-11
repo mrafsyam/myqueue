@@ -1,7 +1,7 @@
-# MyQueue - Don't Queue.
-### A simple prototype to demonstrate an Android App : MyQueue
+# MyQueue - "Don't wait again"
+#### Remember when you go to government hospitals or anywhere else with a really long queue? You pick your ticket and it says your number is in the next 100. You want to go somewhere do something while waiting, but you don't want to risk having your turn called while you aren't there. Here comes MyQueue. Check in your ticket into the App and get notified whenever your turn is closing. The App also shows the real time counter number, just in case you still worry.
 
-#### Description of the current version:
+#### Current version
 * Exiting user is able to log in, and check in with his counterID and number (user's number is from the ticket issued).     
 * App will authenticate the counterID where upon success, App will store the user's number into database.   
 * App will show the current number for the checked-in counter ID, along with the number of people in front of the user's number and the waiting time.   
@@ -9,7 +9,7 @@
 * App is now able to receive Push Notification initiated from server via GCM.    
  
  
-#### TO DO (Target for first working version)  
+#### TO DO (First working version)  
 * App stores GCM Registration ID in SharedPref.   
 * ChangeActivity, add function to insert Registration ID into MST_USER. Requires a new collumn.  
 * Create a script to send GCM message : send_GCM.php. This script accepts Registration ID as a param.  
