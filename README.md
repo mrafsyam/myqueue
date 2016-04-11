@@ -1,7 +1,9 @@
+<p align="center">
+# MyQueue - "Don't wait again"
+</p>
 
 <p align="center">
   <img src="https://github.com/mrafsyam/myqueue/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png?raw=true" width="200"/>
-  # MyQueue - "Don't wait again"
 </p>
 
 ##### Remember when you go to government hospitals or anywhere else with a really long queue? You pick your ticket and it says your number is in the next 100. You want to go somewhere do something while waiting, but you don't want to risk having your turn called while you aren't there. Here comes MyQueue. Check in your ticket into the App and get notified whenever your turn is closing. The App also shows the real time counter number, just in case you still worry.
