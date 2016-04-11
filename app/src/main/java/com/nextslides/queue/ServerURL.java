@@ -4,7 +4,13 @@ import android.app.Application;
 
 public class ServerURL extends Application {
 
+
+    /**
+     * Change this server IP accordingly
+     */
     String url_server = "http://10.194.123.233:8080/";
+
+
     String url_getCurrentNo = url_server + "get_current_num.php";
     String url_getLogin = url_server + "get_login.php";
     String url_CheckIn = url_server + "post_check_in.php";

@@ -1,0 +1,5 @@
+1. Install wamp.
+
+2. Import database via PHPMyadmin
+
+3. Place the php scripts in WWW directory
