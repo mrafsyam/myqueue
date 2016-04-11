@@ -1,6 +1,5 @@
 package com.nextslides.queue;
 
-
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -16,49 +15,23 @@ public class MyGcmListenerService extends GcmListenerService {
 
     private static final String TAG = "MyGcmListenerService";
 
+
     /**
-     * Called when message is received.
-     *
-     * @param from SenderID of the sender.
-     * @param data Data bundle containing message data as key/value pairs.
-     *             For Set of keys use data.keySet().
+     * Called when GCM message is received
      */
-    // [START receive_message]
     @Override
     public void onMessageReceived(String from, Bundle data) {
         String message = data.getString("message");
         Log.d(TAG, "From: " + from);
         Log.d(TAG, "Message: " + message);
 
-        if (from.startsWith("/topics/")) {
-            // message received from some topic.
-        } else {
-            // normal downstream message.
-        }
-
-        // [START_EXCLUDE]
-        /**
-         * Production applications would usually process the message here.
-         * Eg: - Syncing with server.
-         *     - Store message in local database.
-         *     - Update UI.
-         */
-
-        /**
-         * In some cases it may be useful to show a notification indicating to the user
-         * that a message was received.
-         */
-
+        //TODO : Cater for receiving real time counter update
 
         sendNotification(message);
-        // [END_EXCLUDE]
     }
-    // [END receive_message]
 
     /**
      * Create and show a simple notification containing the received GCM message.
-     *
-     * @param message GCM message received.
      */
     private void sendNotification(String message) {
         Intent intent = new Intent(this, DisplayActivity.class);
@@ -83,8 +56,6 @@ public class MyGcmListenerService extends GcmListenerService {
                         .setVibrate(new long[]{100, 250, 100, 250, 100, 250})
                         .setStyle(new NotificationCompat.BigTextStyle()
                                 .bigText(message));
-        //if (Build.VERSION.SDK_INT >= 21) builder.setVibrate(new long[0]);
-
         notificationManager.notify(1, builder.build());
     }
 }

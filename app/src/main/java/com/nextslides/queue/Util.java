@@ -1,8 +1,7 @@
 package com.nextslides.queue;
 
-/*
- * HELPER CLASS
- * TO DO : convert ServerURL class merged into this class
+/**
+ *  Helper class to store strings
  */
 public class Util {
     public static final String EXTRA_MESSAGE = "message";

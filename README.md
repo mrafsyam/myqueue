@@ -17,17 +17,14 @@ Remember when you go to government hospitals or anywhere else with a really long
 
 
 #### Current version
-* Exiting user is able to log in, and check in with his counterID and number (user's number is from the ticket issued).     
-* App will authenticate the counterID where upon success, App will store the user's number into database.   
-* App will show the current number for the checked-in counter ID, along with the number of people in front of the user's number and the waiting time.   
-* User is able to change the counterID and user number, and proceed to re-checkin.   
-* App is now able to receive Push Notification initiated from server via GCM.    
- 
- 
-#### TO DO (First working version)  
-* App stores GCM Registration ID in SharedPref.   
-* ChangeActivity, add function to insert Registration ID into MST_USER. Requires a new collumn.  
-* Create a script to send GCM message : send_GCM.php. This script accepts Registration ID as a param.  
+* Exiting user is able to log in via email and check in with counterID (unique) and ticket number
+* App will authenticate the counterID. Upon success, App will store the user's ticket number into database.
+* App shows the current number for the particular counter, along with the number of people in front and the user's waiting time.
+* User is able to change the counterID and user number, and proceed to re-check in.
+* App now generates Google Cloud Messaging (GCM) Registration Token (device unique ID to receive GCM Push Notification) upon launch and sends it to our server.
+* Simple script to test GCM Push Notification is created (i.e. gcm_test.php). GCM Push Notification works well.
+
+#### TO DO (First working version)
 * Create a dummy script which acts as "Counter Updater" : Update_CurrentNo.php. This script accepts counterID, currentNo as its params. This script simply replace the CurrentNo in MST_COUNTER based on the given counterID. This script will call send_GCM.php upon successfully updating the CurrentNo.  
 * Add function for User Registration (new user account)   
 * Add function to get counterID by scanning QR code. Add simple tool to create QR code with given counterID.    
