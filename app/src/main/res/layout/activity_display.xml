@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMyQueueBackground"
+    android:orientation="vertical"
+    tools:context="com.nextslides.queue.DisplayActivity">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/Color_MyQueueBlueDark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Ticket... -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/BottomItemsLayout"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/imgTicket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/ticket_horizontal_margin"
+            android:layout_marginRight="@dimen/ticket_horizontal_margin"
+            android:src="@drawable/ticket" />
+
+        <!-- inside ticket... -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/imgTicket"
+            android:layout_alignLeft="@id/imgTicket"
+            android:layout_alignRight="@id/imgTicket"
+            android:layout_alignTop="@id/imgTicket"
+            android:layout_marginLeft="@dimen/tickettext_horizontal_margin"
+            android:layout_marginRight="@dimen/tickettext_horizontal_margin"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblCurrentNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Current number served for Outpatient Counter A at Klinik Ampang is " />
+
+            <TextView
+                android:id="@+id/txtCurrentNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblCurrentNo"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:text="1020"
+                android:textSize="@android:dimen/notification_large_icon_height" />
+        </RelativeLayout>
+        <!-- End of inside ticket... -->
+
+    </RelativeLayout>
+    <!-- End of Ticket... -->
+
+    <!-- Bottom items... -->
+    <RelativeLayout
+        android:id="@+id/BottomItemsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <!-- People in front of you... -->
+        <LinearLayout
+            android:id="@+id/PeopleInFrontLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorMyQueueLineBackground"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/lblPeopleInFront"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="People in front of you : " />
+
+            <TextView
+                android:id="@+id/txtPeopleInFront"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="20"
+                android:textColor="@color/colorMyQueue" />
+        </LinearLayout>
+        <!-- End of People In front -->
+
+        <!-- Horizontal thin line... -->
+        <LinearLayout
+            android:id="@+id/HorizontalThinLineLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PeopleInFrontLayout"
+            android:background="@color/colorMyQueueLineBackground"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#E0E0E0" />
+        </LinearLayout>
+        <!-- End of Horizontal thin line... -->
+
+        <!-- You have waited for... -->
+        <LinearLayout
+            android:id="@+id/YouHaveWaitedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/HorizontalThinLineLayout"
+            android:background="@color/colorMyQueueLineBackground"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txtWaitedFor"
+                android:text="You have waited for : " />
+
+            <TextView
+                android:id="@+id/txtWaitedFor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 minutes"
+                android:textColor="@color/colorMyQueue" />
+        </LinearLayout>
+        <!-- End of You have waited for... -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/YouHaveWaitedLayout"
+            android:background="@color/Color_MyQueueBlueDark"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/activity_horizontal_margin">
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnChange"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="@dimen/fbutton_default_padding_bottom"
+                android:layout_weight="1"
+                android:textColor="@color/colorMyQueueWhite"
+                fancy:fb_borderColor="@color/colorMyQueueWhite"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/Color_MyQueueBlueDark"
+                fancy:fb_focusColor="@color/Color_MyQueueBlueDarkLighter"
+                fancy:fb_radius="50dp"
+                fancy:fb_text="Change"
+                fancy:fb_textColor="@color/colorMyQueueWhite" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btnGetNotified"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="@dimen/fbutton_default_padding_bottom"
+                android:layout_weight="1"
+                android:textColor="@color/colorMyQueueWhite"
+                fancy:fb_borderColor="@color/colorMyQueueWhite"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/Color_MyQueueBlueDark"
+                fancy:fb_focusColor="@color/Color_MyQueueBlueDarkLighter"
+                fancy:fb_radius="50dp"
+                fancy:fb_text="Get Notified!"
+                fancy:fb_textColor="@color/colorMyQueueWhite" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!-- End of Bottom items... -->
+
+</RelativeLayout>
