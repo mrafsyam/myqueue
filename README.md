@@ -1,6 +1,4 @@
-<p align="center">
-# MyQueue - "Don't wait again"
-</p>
+# MyQueue - "Don't queue. Use MyQueue"
 
 <p align="center">
   <img src="https://github.com/mrafsyam/myqueue/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png?raw=true" width="200"/>
