@@ -7,18 +7,30 @@
 	<link rel="stylesheet" href="counter_display.css">
 </head>
 
+<?php 
 
+    include('phpqrcode/qrlib.php'); 
+     
+    // outputs image directly into browser, as PNG stream 
+    QRcode::png($_GET['counterID'], 'qrcode.png'); // creates file 
+
+?>
 
 <body>
 
 <div class="pen-title">
-  <h1>MyQueue</h1>
+  <h1>MyQueue</h1> <h1 class="title"><img src="qrcode.png" alt="qrcode" style="width:150px;height:150px;"></h1>
 </div>	
+
 
 <div class="container">
 	<div class="card"></div>
 	<div class="card">
     <h1 class="title" id="counterName"><?php echo $_GET['counterName']; echo " - "; echo $_GET['locationName']; ?></h1>
+	
+	
+	
+	
     
 	<h1 class="number" id="currentNum"><?php echo $_GET['startNo']; ?></h1>
 	
@@ -40,10 +52,17 @@
 			</div>	
 		</form>
 		
+	
 		
 	</div> <!-- for card -->
 </div>
 <!-- for Container -->
+
+
+
+
+
+
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 

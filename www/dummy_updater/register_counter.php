@@ -37,7 +37,7 @@ catch(Exception $e)
 echo "done";
 
 if ($done_flag){
-	header("Location: http://10.194.123.233:8080/dummy_updater/counter_display.php?startNo=$startNo&counterName=$counterName&locationName=$locationName&counterID=$counterID");
+	header("Location: http://localhost:8080/dummy_updater/counter_display.php?startNo=$startNo&counterName=$counterName&locationName=$locationName&counterID=$counterID");
 }
 
 
