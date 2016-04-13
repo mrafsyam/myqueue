@@ -7,12 +7,19 @@
 #### Description  
 Remember when you go to government hospitals or anywhere else with a really long queue? You pick your ticket and it says your number is in the next 100. You want to go somewhere do something while waiting, but you don't want to risk having your turn called while you aren't there. Here comes MyQueue. **Check in into the App** and **get notified** whenever your turn is closing in. The App also shows the real time counter number, just in case you still worry.
 
-#### Screenshot 
+#### Screenshot (App)
 <p align="center">
   <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-42-23-446.png?raw=true" width="200"/>
   <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-41-52-861.png?raw=true" width="200"/>
   <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-41-47-957.png?raw=true" width="200"/>
   <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-50-42-357.png?raw=true" width="200"/>
+</p>
+
+#### Screenshot (Dummy Counter)
+This Dummy Counter, as the name suggests, is created to demonsrate how this system works seamlessly with the currently existing system because ultimately, that is what we would want to achieve - no scraping the old system is neccesary.
+<p align="center">
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/dummy_counter_main.png?raw=true" width="400"/>
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/dummy_counter_display.png?raw=true" width="400"/>
 </p>
 
 
