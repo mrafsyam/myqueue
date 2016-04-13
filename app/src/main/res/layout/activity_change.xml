@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:gravity="right|center_vertical"
                 android:text="Counter ID    " />
 
@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorMyQueueBackground"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:textColor="@color/Color_MyQueueBlueDark" />
             </android.support.design.widget.TextInputLayout>
 
@@ -74,7 +74,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
+                android:layout_weight="4"
                 android:gravity="right|center_vertical"
                 android:text="Your Number    " />
 
@@ -89,7 +89,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorMyQueueBackground"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:textColor="@color/Color_MyQueueBlueDark" />
             </android.support.design.widget.TextInputLayout>
 
@@ -111,6 +111,23 @@
             fancy:fb_text="Sync"
             fancy:fb_textColor="@color/colorMyQueueWhite" />
         <!-- button -->
+
+        <!-- QR button -->
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btnQRScan"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_margin="@dimen/fbutton_default_padding_bottom"
+            android:textColor="@color/colorMyQueueWhite"
+            fancy:fb_borderColor="@color/colorMyQueueWhite"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/Color_MyQueueBlueDark"
+            fancy:fb_focusColor="@color/Color_MyQueueBlueDarkLighter"
+            fancy:fb_radius="10dp"
+            fancy:fb_text="QR Code Scanner"
+            fancy:fb_textColor="@color/colorMyQueueWhite" />
+        <!-- end of QR button -->
+
 
     </LinearLayout>
 </LinearLayout>

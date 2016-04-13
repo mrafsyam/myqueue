@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -32,8 +33,9 @@ public class ChangeActivity extends AppCompatActivity {
     String userNumber = null;
     String counterID = null;
     FancyButton btnSync;
+    FancyButton btnQRCodeScanner;
     Boolean exit = false;
-
+    String TAG = "ChangeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,7 @@ public class ChangeActivity extends AppCompatActivity {
         url_CheckIn = serverURL.getUrl_CheckIn();
 
         btnSync = (FancyButton) findViewById(R.id.btnSync);
+        btnQRCodeScanner = (FancyButton) findViewById(R.id.btnQRScan);
 
         //textbox
         counterIDWrapper = (TextInputLayout) findViewById(R.id.counterIDWrapper);
@@ -88,10 +91,43 @@ public class ChangeActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        });//end of btnSync listener
+
+
+        btnQRCodeScanner.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChangeActivity.this, QRCodeScannerActivity.class);
+                startActivityForResult(intent, 1);
+            }
+        });//end of btnSync listener
 
 
     }//end of onCreate
+
+
+    //to get result from QRCode Scanner activity
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        super.onActivityResult(requestCode, resultCode, data);
+        String result = data.getStringExtra("RESULT");
+        Log.d(TAG, "Data from QR Code : " + result);
+        counterIDWrapper.getEditText().setText(result, TextView.BufferType.EDITABLE);
+        Toast.makeText(ChangeActivity.this, "A Counter ID is captured via QR Code", Toast.LENGTH_LONG).show();
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
 
     //save current checkin to sharedpref
     public void saveCheckIn() {

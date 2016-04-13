@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nextslides.queue">
-
-
-    <!-- [START Minimum Android Version] -->
+    package="com.nextslides.queue"> <!-- [START Minimum Android Version] -->
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="17" />
@@ -15,39 +12,41 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="com.nextslides.queue.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <permission
         android:name="com.nextslides.queue.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
-    <!-- [END permission] -->
 
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- [END permission] -->
     <application
-        android:name="com.nextslides.queue.ServerURL"
+        android:name=".ServerURL"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
-            android:name="com.nextslides.queue.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.nextslides.queue.DisplayActivity"
+            android:name=".DisplayActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"></activity>
-
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.nextslides.queue.ChangeActivity"
+            android:name=".ChangeActivity"
             android:label="@string/title_activity_change"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
 
         <!-- [START gcm_receiver] -->
         <receiver
@@ -56,6 +55,7 @@
             android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
                 <category android:name="gcm.play.android.samples.com.gcmquickstart" />
             </intent-filter>
         </receiver>
@@ -64,7 +64,7 @@
 
         <!-- [START gcm_listener] -->
         <service
-            android:name="com.nextslides.queue.MyGcmListenerService"
+            android:name=".MyGcmListenerService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -72,9 +72,10 @@
         </service>
         <!-- [END gcm_listener] -->
 
+
         <!-- [START instanceId_listener] -->
         <service
-            android:name="com.nextslides.queue.MyInstanceIDListenerService"
+            android:name=".MyInstanceIDListenerService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.gms.iid.InstanceID" />
@@ -82,12 +83,14 @@
         </service>
         <!-- [END instanceId_listener] -->
 
-
         <service
             android:name=".RegistrationIntentService"
-            android:exported="false"></service>
+            android:exported="false" />
 
-
+        <activity
+            android:name=".QRCodeScannerActivity"
+            android:label="@string/title_activity_qrcode_scanner"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

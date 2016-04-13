@@ -14,23 +14,27 @@
         android:layout_weight="0.5"
         android:orientation="vertical">
 
-        <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/spin_kit"
-            style="@style/SpinKitView.Large.WanderingCubes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            app:SpinKit_Color="@color/Color_MyQueueBlueDark" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/lblApptitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView"
             android:gravity="center"
+            android:paddingTop="@dimen/abc_action_bar_default_padding_start_material"
             android:text="MyQueue"
-            android:textColor="@color/Color_MyQueueBlueDark"
+            android:textColor="@color/colorBlueLogo"
             android:textSize="30sp" />
     </RelativeLayout>
 
@@ -89,10 +93,6 @@
             fancy:fb_text="LOGIN"
             fancy:fb_textColor="@color/colorMyQueueWhite" />
 
-        <ProgressBar
-            android:id="@+id/registrationProgressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

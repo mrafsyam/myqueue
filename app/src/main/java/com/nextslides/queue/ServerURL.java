@@ -8,7 +8,7 @@ public class ServerURL extends Application {
     /**
      * Change this server IP accordingly
      */
-    String url_server = "http://10.194.123.233:8080/";
+    String url_server = "http://10.194.123.70:8080/";
 
 
     String url_getCurrentNo = url_server + "get_current_num.php";
