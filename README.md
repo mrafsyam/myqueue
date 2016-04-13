@@ -9,10 +9,11 @@ Remember when you go to government hospitals or anywhere else with a really long
 
 #### Screenshot (App)
 <p align="center">
-  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-42-23-446.png?raw=true" width="200"/>
-  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-41-52-861.png?raw=true" width="200"/>
-  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-41-47-957.png?raw=true" width="200"/>
-  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-50-42-357.png?raw=true" width="200"/>
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-42-23-446.png?raw=true" width="250"/>
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/change.jpg?raw=true" width="250"/>
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/qrcodescanner.jpg?raw=true" width="250"/>
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-41-47-957.png?raw=true" width="250"/>
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/Screenshot_2016-04-11-14-50-42-357.png?raw=true" width="250"/>
 </p>
 
 #### Screenshot (Dummy Counter)
