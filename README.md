@@ -42,7 +42,7 @@ This Dummy Counter, as the name suggests, is created to demonstrate how this sys
    
 #### TO DO (After first working version is completed) 
 * Proposal Presentation for Crowd Funding & Investor Pitching  
-* Implemment Framework or better codes for Server scripts 
+* Implement Framework or better codes for Server scripts 
 * Documentation of first working version
  
 
