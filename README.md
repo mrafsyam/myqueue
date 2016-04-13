@@ -16,10 +16,10 @@ Remember when you go to government hospitals or anywhere else with a really long
 </p>
 
 #### Screenshot (Dummy Counter)
-This Dummy Counter, as the name suggests, is created to demonsrate how this system works seamlessly with the currently existing system because ultimately, that is what we would want to achieve - no scraping the old system is neccesary.
+This Dummy Counter, as the name suggests, is created to demonstrate how this system works seamlessly with the currently existing system because ultimately, that is what we would want to achieve - no scraping the old system is necessary.
 <p align="center">
-  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/dummy_counter_main.png?raw=true" width="400"/>
-  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/dummy_counter_display.png?raw=true" width="400"/>
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/dummy_counter_main.png?raw=true" width="450"/>
+  <img src="https://github.com/mrafsyam/myqueue/blob/master/Screenshot/dummy_counter_display.png?raw=true" width="450"/>
 </p>
 
 
