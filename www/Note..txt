@@ -1,5 +1,9 @@
 1. Install wamp.
 
-2. Import database via PHPMyadmin
+2. Import test2.sql (MySQL) database via PHPMyadmin
 
 3. Place the php scripts in WWW directory
+
+4. Change the Server IP in myqueue\app\src\main\java\com\nextslides\queue\ServerURL.java
+
+4. If new GCM API key is required, follow this instruction. https://developers.google.com/cloud-messaging/android/client
